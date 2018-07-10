@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>OneUI - Admin Dashboard Template &amp; UI Framework</title>
+    <title>Filter search</title>
 
     <meta name="description" content="OneUI - Admin Dashboard Template &amp; UI Framework created by pixelcave and published on Themeforest">
     <meta name="author" content="pixelcave">
@@ -64,7 +64,7 @@
 
     'header-navbar-fixed'        Enables fixed header
 -->
-<div id="page-container" class=" header-navbar-fixed">
+<div id="page-container">
 
 
     <!-- Main Container -->
@@ -74,14 +74,8 @@
             <div class="row items-push">
                 <div class="col-sm-7">
                     <h1 class="page-heading">
-                        Blank <small>That feeling of delight when you start your awesome new project!</small>
+                        Navigationg goes here
                     </h1>
-                </div>
-                <div class="col-sm-5 text-right hidden-xs">
-                    <ol class="breadcrumb push-10-t">
-                        <li>Generic</li>
-                        <li><a class="link-effect" href="">Blank</a></li>
-                    </ol>
                 </div>
             </div>
         </div>
@@ -89,86 +83,110 @@
 
         <!-- Page Content -->
         <div class="content">
-            <h2 class="content-heading">Your content</h2>
-            <div class="block-content">
-                <!-- DataTables init on table by adding .js-dataTable-full-pagination class, functionality initialized in js/pages/base_tables_datatables.js -->
-                <table class="table table-bordered table-striped js-dataTable-full-pagination">
-                    <thead>
-                    <tr>
-                        <th class="text-center"></th>
-                        <th>State
-                            <div class="btn-group">
-                                <div class="btn-group">
-                                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li class="dropdown-header">Profile</li>
-                                        <li>
-                                            <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">3</span>News</a>
-                                        </li>
-                                        <li>
-                                            <a tabindex="-1" href="javascript:void(0)"><span class="badge pull-right">1</span>Messages</a>
-                                        </li>
-                                        <li class="divider"></li>
-                                        <li class="dropdown-header">More</li>
-                                        <li>
-                                            <a tabindex="-1" href="javascript:void(0)">Edit Profile..</a>
-                                        </li>
-                                    </ul>
+            <h2 class="content-heading">Filters</h2>
+            <div class="block block-content">
+                <!-- Search Filters -->
+                <div class="block">
+                    <div class="block-content form-horizontal">
+                        <p class="text-center">Filter your search <mark class="font-w600">inspiring</mark></p>
+
+                        <!-- Buttons which toggles filters content in smaller screens -->
+                        <!-- Toggle class helper (for .js-search-filters below), functionality initialized in App() -> uiToggleClass() -->
+                        <button class="btn btn-sm btn-block btn-default hidden-lg push" type="button" data-toggle="class-toggle" data-target=".js-search-filters" data-class="visible-lg">
+                            <i class="fa fa-filter push-5-r"></i> Search Filters
+                        </button>
+
+                        <!-- Filters Content -->
+                        <div class="js-search-filters visible-lg">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <select id="filter-one" name="state" class="form-control" size="1">
+                                                <option value="0" disabled selected>State</option>
+                                                <option value="simple">State 1 </option>
+                                                <option value="multiple">State 2 </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <select id="filter-two" name="city" class="form-control" size="1">
+                                                <option value="0" disabled selected>City</option>
+                                                <option value="5">City 1</option>
+                                                <option value="4">City 2</option>
+                                                <option value="3">City 3</option>
+                                                <option value="2">City 4</option>
+                                                <option value="1">City 5</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="first-print print-box"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <select id="filter-three" name="College" class="form-control" size="1">
+                                                <option value="0" disabled selected>College</option>
+                                                <option value="1">Red (9)</option>
+                                                <option value="2">Blue (2)</option>
+                                                <option value="3">Yellow (9)</option>
+                                                <option value="4">Black (20)</option>
+                                                <option value="5">Grey (7)</option>
+                                                <option value="5">Not Specified (3)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <select id="filter-four" name="University" class="form-control" size="1">
+                                                <option value="0" disabled selected>University</option>
+                                                <option value="1">Red (9)</option>
+                                                <option value="2">Blue (2)</option>
+                                                <option value="3">Yellow (9)</option>
+                                                <option value="4">Black (20)</option>
+                                                <option value="5">Grey (7)</option>
+                                                <option value="5">Not Specified (3)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="second-print print-box"></div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <select id="filter-five" name="Sport" class="form-control" size="1">
+                                                <option value="0" disabled selected>Sport</option>
+                                                <option value="1">Red (9)</option>
+                                                <option value="2">Blue (2)</option>
+                                                <option value="3">Yellow (9)</option>
+                                                <option value="4">Black (20)</option>
+                                                <option value="5">Grey (7)</option>
+                                                <option value="5">Not Specified (3)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-xs-12">
+                                            <select id="filter-six" name="Sport2" class="form-control" size="1">
+                                                <option value="0" disabled selected>Sport2</option>
+                                                <option value="1">Red (9)</option>
+                                                <option value="2">Blue (2)</option>
+                                                <option value="3">Yellow (9)</option>
+                                                <option value="4">Black (20)</option>
+                                                <option value="5">Grey (7)</option>
+                                                <option value="5">Not Specified (3)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="third-print print-box"></div>
                                 </div>
                             </div>
-                        </th>
-                        <th >College</th>
-                        <th style="width: 15%;">Sports</th>
-                        <th class="text-center" style="width: 10%;">Actions</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td class="font-w600">Donald Barnes</td>
-                        <td >client1@example.com</td>
-                        <td >
-                            <span class="label label-danger">Disabled</span>
-                        </td>
-                        <td class="text-center">
-                            <div class="btn-group">
-                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">2</td>
-                        <td class="font-w600">Laura Bell</td>
-                        <td >client2@example.com</td>
-                        <td >
-                            <span class="label label-primary">Personal</span>
-                        </td>
-                        <td class="text-center">
-                            <div class="btn-group">
-                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">3</td>
-                        <td class="font-w600">Ann Parker</td>
-                        <td >client3@example.com</td>
-                        <td >
-                            <span class="label label-warning">Trial</span>
-                        </td>
-                        <td class="text-center">
-                            <div class="btn-group">
-                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Edit Client"><i class="fa fa-pencil"></i></button>
-                                <button class="btn btn-xs btn-default" type="button" data-toggle="tooltip" title="Remove Client"><i class="fa fa-times"></i></button>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
+                        </div>
+                        <!-- END Filters Content -->
+                    </div>
+                </div>
+                <!-- END Search Filters -->
             </div>
         </div>
         <!-- END Page Content -->
@@ -246,5 +264,6 @@
 
 <!-- Page JS Code -->
 <script src="../assets/js/pages/base_tables_datatables.js"></script>
+
 </body>
 </html>
